@@ -1,5 +1,6 @@
 GEM
   remote: https://rubygems.org/
+  remote: https://rails-assets.org/
   specs:
     actioncable (5.0.6)
       actionpack (= 5.0.6)
@@ -222,7 +223,7 @@ DEPENDENCIES
   pg (~> 0.18)
   puma (~> 3.0)
   rails (~> 5.0.1)
-  rails-assets-tether
+  rails-assets-tether (>= 1.4.3)!
   rest-client
   rspec-rails (~> 3.7)
   sass-rails (~> 5.0)
