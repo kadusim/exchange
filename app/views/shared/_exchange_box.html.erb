@@ -11,7 +11,7 @@
             <%= select_tag "currency", options_for_select(currency_select, "BRL"), class: "form-control", id: "currency" %>
           </div>
           <div class="form-group">
-            <input type="number" name="quantity" id="quantity" class="form-control" placeholder="Quantidade ($10)" step="any" required>
+            <input type="number" name="quantity" id="quantity" class="form-control" placeholder="Valor ($10)" step="any" required>
           </div>
         </div>
         <div class="destination_currency">
@@ -23,9 +23,12 @@
             <input type="text" id="result" name="result" class="form-control" placeholder="Resultado" readonly>
           </div>
         </div>
-        <div>
+        <!-- <div class="form-group"> -->
+          <button type="button" id="inverter" class="btn btn-primary btn-inverter col-md-12">INVERTER MOEDAS</button>
+        <!-- </div> -->
+        <!-- <div class="form-group">
           <button type="submit" class="btn btn-primary btn-exchange col-md-12">CONVERTER</button>
-        </div>
+        </div> -->
       <% end %>
     </div>
   </div>
