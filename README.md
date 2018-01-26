@@ -1,24 +1,31 @@
-# README
+![image](/public/app_exchange.png)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#Exchange
 
-Things you may want to cover:
+This app lets you convert several diferent currencies. It works by consuming and external RESTful service. Feel free to clone and fork it as you please!
 
-* Ruby version
+##Installation
 
-* System dependencies
+This app runs on a docker container. The following commands are necessary to set up the environment on your machine.
 
-* Configuration
+* Make sure you have docker and docker-compose installed.
 
-* Database creation
+* Run ```docker-compose build``` to install all gems.
 
-* Database initialization
+* Run ```docker-compose up``` to start the application.
 
-* How to run the test suite
+* The app should be available on http://localhost:3000
 
-* Services (job queues, cache servers, search engines, etc.)
+For production don't forget run ```docker-compose run --rm website bundle exec rake assets:precompile```
 
-* Deployment instructions
+##Database
 
-* ...
+Keep in mind that it's not necessary to structure an actual database for running this application. But to create a database and run all migrations. Run:
+```
+docker-compose run --rm website rails db:create && docker-compose run --rm website rails db:migrate
+Tests
+```
+The capybara and rspec gems are used for testing. The following command should run them.
+```
+docker-compose run --rm website rspec
+```

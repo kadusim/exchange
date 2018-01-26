@@ -1,18 +1,20 @@
 $(document).ready ->
 
-  $("#inverter").click ->
+  $("#change").click ->
     destination_aux = $("#currency_destination").val()
     $("#currency_destination").val($("#currency").val())
     $("#currency").val(destination_aux)
-    converter();
+    convert()
 
   $('form').change ->
-    if $("#quantity").val() == ""
-      $("#quantity").focus()
-    else
-      converter();
+    convert()
 
-converter = () ->
+convert = () ->
+  empty_value = $('#quantity').val() <= 0 || $('#quantity').val() == ""
+  if empty_value
+    $("#quantity").focus()
+    return
+
   $.ajax '/exchange',
       type: 'POST'
       dataType: 'json'

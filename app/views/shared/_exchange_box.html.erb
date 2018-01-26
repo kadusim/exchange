@@ -1,30 +1,30 @@
 <div class="exchange_box">
   <div class="card">
     <div class="card-header text-center">
-      Simule sua conversão
+      Simulate your convertion
     </div>
     <div class="card-block">
       <%= form_tag("/exchange", method: "post", id: "exchange_form") do %>
         <div class="local_currency">
           <div class="form-group">
-            <p class="title">Moeda Local</p>
+            <p class="title">Have</p>
             <%= select_tag "currency", options_for_select(currency_select, "BRL"), class: "form-control", id: "currency" %>
           </div>
           <div class="form-group">
-            <input type="number" name="quantity" id="quantity" class="form-control" placeholder="Valor ($10)" step="any" required>
+            <input type="number" name="quantity" id="quantity" class="form-control" placeholder="Amount($)" step="any" required>
           </div>
         </div>
         <div class="destination_currency">
           <div class="form-group">
-            <p class="title">Moeda Pretendida</p>
+            <p class="title">Want</p>
             <%= select_tag "currency_destination", options_for_select(currency_select, "EUR"), class: "form-control", id: "currency_destination"%>
           </div>
           <div class="form-group">
-            <input type="text" id="result" name="result" class="form-control" placeholder="Resultado" readonly>
+            <input type="text" id="result" name="result" class="form-control" placeholder="Result" readonly>
           </div>
         </div>
         <!-- <div class="form-group"> -->
-          <button type="button" id="inverter" class="btn btn-primary btn-inverter col-md-12">INVERTER MOEDAS</button>
+          <button type="button" id="change" class="btn btn-primary btn-change col-md-12">Change currency</button>
         <!-- </div> -->
         <!-- <div class="form-group">
           <button type="submit" class="btn btn-primary btn-exchange col-md-12">CONVERTER</button>
