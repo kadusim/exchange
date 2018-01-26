@@ -1,10 +1,10 @@
 ![image](/public/app_exchange.png)
 
-#Exchange
+# Exchange
 
 This app lets you convert several diferent currencies. It works by consuming and external RESTful service. Feel free to clone and fork it as you please!
 
-##Installation
+## Installation
 
 This app runs on a docker container. The following commands are necessary to set up the environment on your machine.
 
@@ -18,7 +18,7 @@ This app runs on a docker container. The following commands are necessary to set
 
 For production don't forget run ```docker-compose run --rm website bundle exec rake assets:precompile```
 
-##Database
+## Database
 
 Keep in mind that it's not necessary to structure an actual database for running this application. But to create a database and run all migrations. Run:
 ```
